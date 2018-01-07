@@ -1,1 +1,1 @@
-<h1>Учебный проект HTML Academy, Gllacy.</h1>
+<h1>Учебный проект HTML Academy, Device.</h1>
