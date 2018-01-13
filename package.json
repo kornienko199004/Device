@@ -12,11 +12,15 @@
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
     "gulp-posthtml": "^3.0.2",
+    "postcss": "^6.0.16",
+    "postcss-sorting": "^3.1.0",
     "posthtml-include": "^1.1.0",
     "run-sequence": "^2.2.1",
-    "stylelint": "8.1.x"
+    "stylelint": "^8.1.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "stylelint-config-htmlacademy": "0.1.x"
+  },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint 'less/**/*.less' --syntax less",
@@ -24,6 +28,19 @@
     "build": "gulp build",
     "start": "npm run build && gulp serve"
   },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "editorconfig-cli": [
+    "*.html",
+    "*.json",
+    "*.js",
+    "js/**/*.js",
+    "img/**/*.svg",
+    "less/**/*.less"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kornienko199004/Device.git"
