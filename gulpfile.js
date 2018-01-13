@@ -10,6 +10,7 @@ var run = require('run-sequence');
 var del = require('del');
 var posthtml = require('gulp-posthtml');
 var include = require('posthtml-include');
+var sorting = require('postcss-sorting');
 
 gulp.task('style', function () {
   gulp.src('less/style.less')
@@ -21,6 +22,29 @@ gulp.task('style', function () {
 
   .pipe(gulp.dest('build/css'))
   .pipe(server.stream());
+});
+
+gulp.task('css', function () {
+    return gulp.src('./build/css/style.css')
+    .pipe(
+        postcss([
+            sorting({
+      'order': [
+        'custom-properties',
+        'dollar-variables',
+        'declarations',
+        'at-rules',
+        'rules'
+      ],
+
+      'properties-order': ["height", "width", "content", "position","top","right","bottom","left","z-index", "display"],
+
+      'unspecified-properties-position': 'bottom'
+    })
+        ])
+    ).pipe(
+        gulp.dest('build/css')
+    );
 });
 
 gulp.task('html', function () {
@@ -42,7 +66,7 @@ gulp.task('serve', function () {
 
 gulp.task('copy', function () {
   return gulp.src([
-    'fonts/**/*.{woff, woff2}',
+    'fonts/**',
     'img/**',
     'js/**'
     ], {
@@ -61,6 +85,8 @@ gulp.task('build', function (done) {
     'copy',
     'style',
     'html',
+    'css',
+    'serve',
     done
   );
 });
