@@ -1,9 +1,33 @@
 .search-form__input {
   font-family: inherit;
   font-size: 15px;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  padding-top: 5px;
+  padding-left: 39px;
 }
 
 .search-form__input::placeholder {
   font-family: inherit;
   font-size: 15px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search-form {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    top: 7px;
+    left: 2px;
+    background: url("../img/icons/icon-search.svg");
+    position: absolute;
+  }
+}
+
+.search-form__button {
+  display: none;
 }

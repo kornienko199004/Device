@@ -7,20 +7,23 @@
 </head>
 <body>
   <header class="page-header">
-    <div class="page-header__inner">
+    <div class="page-header__inner page-header__inner--top">
       <a class="page-header__logo">Device</a>
     </div>
-
-    <div class="page-header__inner">
+    <div class="page-header__inner page-header__inner--middle">
       <div class="page-header__search">
         <form class="search-form">
           <input type="text" class="search-form__input" placeholder="Поиск по сайту">
-          <button class="search-form__button visually-hidden">Поиск</button>
+          <button class="search-form__button">Найти</button>
         </form>
       </div>
       <div class="page-header__user-nav user-nav">
         <div class="user-nav__wrapper user-nav__wrapper--login">
-          <a href="#" class="user-nav__link user-nav__link--login">Войти</a>
+          <a href="#" class="user-nav__link user-nav__link--login">
+            <svg class="user-nav__svg user-nav__svg--user" width="16px" height="20px" viewBox="1 -2 16 16">
+              <use xlink:href="img/sprite.svg#icon-user"></use>
+           </svg>
+           Войти</a>
         </div>
         <div class="user-nav__wrapper user-nav__wrapper--logout visually-hidden">
           <a href="#" class="user-nav__link user-nav__link--username">Валентин Петухов</a>
@@ -28,22 +31,31 @@
         </div>
       </div>
       <div class="page-header__products-nav products-nav">
-        <a href="#" class="products-nav__button products-nav__button--compare">Сравнить</a>
-        <a href="#" class="products-nav__button products-nav__button--cart">Корзина</a>
+        <a href="#" class="products-nav__button products-nav__button--compare">
+          <svg class="user-nav__svg user-nav__svg--compare" width="20px" height="20px" viewBox="-2 -4 16 16">
+            <use xlink:href="img/sprite.svg#icon-compare"></use>
+         </svg>
+         Сравнить</a>
+        <a href="#" class="products-nav__button products-nav__button--cart">
+          <svg class="user-nav__svg" width="20px" height="20px" viewBox="2 -4 16 16">
+            <use xlink:href="img/sprite.svg#icon-cart"></use>
+         </svg>
+         Корзина</a>
       </div>
     </div>
 
-    <div class="page-header__inner">
+    <div class="page-header__inner page-header__inner--bottom">
       <nav class="page-header__nav main-nav"><ul class="main-nav__list main-nav__list--upper">
         <li class="main-nav__item"><a href="#" class="main-nav__link">Каталог товаров</a>
-          <ul class="main-nav__list main-nav__list--inserted">
-            <li class="main-nav__item"><a href="#" class="main-nav__link">Виртуальная реальность</a></li>
-            <li class="main-nav__item"><a href="catalog.html" class="main-nav__link">Моноподы для селфи</a></li>
-            <li class="main-nav__item"><a href="#" class="main-nav__link">Экшн-камеры</a></li>
-            <li class="main-nav__item"><a href="#" class="main-nav__link">Фитнес-браслеты</a></li>
-            <li class="main-nav__item"><a href="#" class="main-nav__link">Умные часы</a></li>
-            <li class="main-nav__item"><a href="#" class="main-nav__link">Квадрокоптеры</a></li>
-          </ul>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list main-nav__list--inserted">
+              <li class="main-nav__item"><a href="#" class="main-nav__link">Виртуальная реальность</a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__link">Фитнес-браслеты</a></li><li class="main-nav__item"><a href="#" class="main-nav__link">Квадрокоптеры</a></li>
+              <li class="main-nav__item"><a href="catalog.html" class="main-nav__link">Моноподы для селфи</a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__link">Умные часы</a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__link">Экшн-камеры</a></li>
+              </ul>
+          </div>
         </li>
         <li class="main-nav__item"><a href="#" class="main-nav__link">Доставка</a></li>
         <li class="main-nav__item"><a href="#" class="main-nav__link">Гарантия</a></li>
@@ -220,18 +232,18 @@
   </main>
   <footer class="page-footer">
     <div class="page-footer__inner">
-      <p class="page-footer__logo"></p>
+      <p class="page-footer__logo"><a class="page-footer__logo">Device</a></p>
       <div class="page-footer__user-nav user-nav">
         <div class="user-nav__wrapper user-nav__wrapper--login">
-          <a href="#" class="user-nav__link user-nav__link--login">Войти</a>
+          <a href="#" class="user-nav__link user-nav__link--login user-nav__link--white">Войти</a>
         </div>
         <div class="user-nav__wrapper user-nav__wrapper--logout">
-          <a href="#" class="user-nav__link user-nav__link--logout">Выйти</a>
+          <a href="#" class="user-nav__link user-nav__link--logout user-nav__link--white">Выйти</a>
         </div>
       </div>
       <div class="page-footer__products-nav products-nav">
-        <a href="#" class="products-nav__button products-nav__button--compare">Сравнить</a>
-        <a href="#" class="products-nav__button products-nav__button--cart">Корзина</a>
+        <a href="#" class="products-nav__button products-nav__button--compare products-nav__button--white">Сравнить</a>
+        <a href="#" class="products-nav__button products-nav__button--cart products-nav__button--white">Корзина</a>
       </div>
     </div>
     <div class="page-footer__inner">
